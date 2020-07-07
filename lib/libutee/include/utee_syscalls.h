@@ -278,4 +278,9 @@ TEE_Result utee_cache_operation(void *va, size_t l, unsigned long op);
 
 TEE_Result utee_gprof_send(void *buf, size_t size, uint32_t *id);
 
+
+/* reefs */
+TEE_Result reefs_write(const void *filename, size_t filename_size,
+                       const void *data, size_t data_size);
+
 #endif /* UTEE_SYSCALLS_H */

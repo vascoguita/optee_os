@@ -71,6 +71,8 @@ libdeps += $(ta-dev-kit-dir$(sm))/lib/libmbedtls.a
 endif
 libnames += dl
 libdeps += $(ta-dev-kit-dir$(sm))/lib/libdl.a
+libnames += reefs
+libdeps += $(ta-dev-kit-dir$(sm))/lib/libreefs.a
 
 # Pass config variable (CFG_) from conf.mk on the command line
 cppflags$(sm) += $(strip \

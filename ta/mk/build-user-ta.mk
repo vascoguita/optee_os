@@ -33,7 +33,7 @@ link-ldflags$(sm) := -static
 endif
 
 libdirs  = $(ta-dev-kit-dir$(sm))/lib
-libnames = utils utee
+libnames = utils utee reefs
 ifeq ($(CFG_TA_MBEDTLS),y)
 libnames += mbedtls
 endif

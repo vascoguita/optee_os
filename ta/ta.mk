@@ -104,6 +104,12 @@ libuuid = be807bbd-81e1-4dc4-bd99-3d363f240ece
 libl = utee utils
 include mk/lib.mk
 
+libname = reefs
+libdir = lib/libreefs
+libuuid = 3e5b8509-d831-4f14-86b4-9f73848ffe2f
+libl = utee utils
+include mk/lib.mk
+
 base-prefix :=
 
 incdirs-host := $(filter-out lib/libutils%, $(incdirs$(sm)))
