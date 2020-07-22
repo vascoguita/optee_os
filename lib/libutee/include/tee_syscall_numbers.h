@@ -79,9 +79,16 @@
 #define TEE_SCN_SE_CHANNEL_CLOSE__DEPRECATED		69
 /* End of deprecated Secure Element API syscalls */
 #define TEE_SCN_CACHE_OPERATION			70
-#define TEE_SCN_REE_FS_WRITE			71
 
-#define TEE_SCN_MAX				71
+/* REE FS */
+#define TEE_SCN_REE_FS_CREATE			71
+#define TEE_SCN_REE_FS_OPEN 			72
+#define TEE_SCN_REE_FS_CLOSE 			73
+#define TEE_SCN_REE_FS_WRITE 			74
+#define TEE_SCN_REE_FS_READ 			75
+/* End of REE FS */
+
+#define TEE_SCN_MAX				        75
 
 /* Maximum number of allowed arguments for a syscall */
 #define TEE_SVC_MAX_ARGS			8

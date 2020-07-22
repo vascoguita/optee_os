@@ -19,7 +19,7 @@
 #include <tee/arch_svc.h>
 #include <tee/tee_svc_cryp.h>
 #include <tee/tee_svc_storage.h>
-#include <tee/tee_svc_reefs.h>
+#include <tee/ree_fs_svc.h>
 #include <tee/svc_cache.h>
 #include <tee_syscall_numbers.h>
 #include <trace.h>
@@ -119,7 +119,11 @@ static const struct syscall_entry tee_svc_syscall_table[] = {
 	SYSCALL_ENTRY(syscall_not_supported),
 	SYSCALL_ENTRY(syscall_not_supported),
 	SYSCALL_ENTRY(syscall_cache_operation),
-    SYSCALL_ENTRY(syscall_reefs_write),
+    SYSCALL_ENTRY(syscall_ree_fs_create),
+    SYSCALL_ENTRY(syscall_ree_fs_open),
+    SYSCALL_ENTRY(syscall_ree_fs_close),
+    SYSCALL_ENTRY(syscall_ree_fs_write),
+    SYSCALL_ENTRY(syscall_ree_fs_read),
 };
 
 #ifdef TRACE_SYSCALLS

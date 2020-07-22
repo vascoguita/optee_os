@@ -279,8 +279,18 @@ TEE_Result utee_cache_operation(void *va, size_t l, unsigned long op);
 TEE_Result utee_gprof_send(void *buf, size_t size, uint32_t *id);
 
 
-/* reefs */
-TEE_Result reefs_write(const void *filename, size_t filename_size,
-                       const void *data, size_t data_size);
+/* REE FS */
+
+TEE_Result ree_fs_create(char *filename, size_t filename_size, int *fd);
+
+TEE_Result ree_fs_open(char *filename, size_t filename_size, int *fd);
+
+TEE_Result ree_fs_close(int fd);
+
+TEE_Result ree_fs_write(int fd, int64_t offset, void *data, size_t data_size);
+
+TEE_Result ree_fs_read(int fd, int64_t offset, void *data, size_t *data_size);
+
+/* End of REE FS */
 
 #endif /* UTEE_SYSCALLS_H */

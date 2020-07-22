@@ -28,7 +28,8 @@ srcs-y += tee_svc.c
 cppflags-tee_svc.c-y += -DTEE_IMPL_VERSION=$(TEE_IMPL_VERSION)
 srcs-y += tee_svc_cryp.c
 srcs-y += tee_svc_storage.c
-srcs-y += tee_svc_reefs.c
+srcs-y += ree_fs_svc.c
+srcs-y += ree_fs_rpc.c
 srcs-$(CFG_RPMB_FS) += tee_rpmb_fs.c
 srcs-$(CFG_REE_FS) += tee_ree_fs.c
 srcs-$(call cfg-one-enabled,CFG_REE_FS CFG_TEE_CORE_EMBED_INTERNAL_TESTS) += \

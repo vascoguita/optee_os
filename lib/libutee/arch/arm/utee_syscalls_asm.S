@@ -123,6 +123,16 @@
 
         UTEE_SYSCALL utee_cache_operation, TEE_SCN_CACHE_OPERATION, 3
 
-        /* REE_FS */
+        /* REE FS */
 
-        UTEE_SYSCALL reefs_write, TEE_SCN_REE_FS_WRITE, 4
+        UTEE_SYSCALL ree_fs_create, TEE_SCN_REE_FS_CREATE, 3
+
+        UTEE_SYSCALL ree_fs_open, TEE_SCN_REE_FS_OPEN, 3
+
+        UTEE_SYSCALL ree_fs_close, TEE_SCN_REE_FS_CLOSE, 1
+
+        UTEE_SYSCALL ree_fs_write, TEE_SCN_REE_FS_WRITE, 4
+
+        UTEE_SYSCALL ree_fs_read, TEE_SCN_REE_FS_READ, 4
+
+        /* End of REE FS */
