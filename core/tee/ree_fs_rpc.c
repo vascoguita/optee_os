@@ -109,7 +109,7 @@ TEE_Result ree_fs_rpc_read(int fd, int64_t offset, void *data, size_t *data_size
     params[0] = THREAD_PARAM_VALUE(IN, OPTEE_RPC_FS_READ, fd, offset);
     params[1] = THREAD_PARAM_MEMREF(OUT, mobj, 0, *data_size);
 
-    thread_rpc_cmd(OPTEE_RPC_CMD_FS, num_params, params);
+    res = thread_rpc_cmd(OPTEE_RPC_CMD_FS, num_params, params);
     if (res == TEE_SUCCESS) {
         *data_size = params[1].u.memref.size;
         memcpy(data, va, *data_size);
